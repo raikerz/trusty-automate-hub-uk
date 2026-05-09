@@ -1,21 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Seo } from "@/lib/seo";
 import { CheckCircle2 } from "lucide-react";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Nexus Equipment" },
-      { name: "description", content: "Nexus Equipment is an industrial sourcing and supply company providing surplus and technical equipment to clients worldwide." },
-      { property: "og:title", content: "About Nexus Equipment" },
-      { property: "og:description", content: "Industrial sourcing, surplus equipment and worldwide supply." },
-    ],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export default function AboutPage() {
   const points = [
     "Direct sourcing from manufacturers, authorized distributors and asset owners",
     "Specialists in surplus, hard-to-find and obsolete equipment",
@@ -24,6 +12,12 @@ function AboutPage() {
   ];
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="About — Nexus Equipment"
+        description="Nexus Equipment is an industrial sourcing and supply company providing surplus and technical equipment to clients worldwide."
+        ogTitle="About Nexus Equipment"
+        ogDescription="Industrial sourcing, surplus equipment and worldwide supply."
+      />
       <SiteHeader />
       <section className="border-b bg-gradient-to-b from-secondary to-background">
         <div className="container mx-auto px-6 py-20">
