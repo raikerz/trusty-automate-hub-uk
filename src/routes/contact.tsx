@@ -61,7 +61,6 @@ export default function ContactPage() {
           <form
                 action="https://formspree.io/f/mwvywvlz"
                   method="POST"
-                  encType="multipart/form-data"
                   className="rounded-xl border bg-card p-8 shadow-elegant"
                 >
                   <input type="hidden" name="_captcha" value="false" />
@@ -166,19 +165,6 @@ export default function ContactPage() {
                       rows={5}
                       placeholder="Part numbers, specifications, quantities, target delivery date..."
                       className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
-                    />
-                  </div>
-
-                  <div className="mt-5">
-                    <label className="text-sm font-medium text-foreground">
-                      Upload files / photos
-                    </label>
-
-                    <input
-                      type="file"
-                      name="attachment"
-                      multiple
-                      className="mt-2 block w-full rounded-md border border-input bg-background px-4 py-3 text-sm"
                     />
                   </div>
 
