@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Seo } from "@/lib/seo";
 import { Phone, Mail, Send } from "lucide-react";
 
+
 export default function ContactPage() {
 
 
@@ -61,6 +62,11 @@ export default function ContactPage() {
           <form
                 action="https://formspree.io/f/mwvywvlz"
                   method="POST"
+                  onSubmit={() => {
+                  setTimeout(() => {
+                   alert("Thank you! Your inquiry has been submitted.");
+                    }, 500);
+                  }}
                   className="rounded-xl border bg-card p-8 shadow-elegant"
                 >
                   <input type="hidden" name="_captcha" value="false" />
