@@ -8,7 +8,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
          <img
-                src="/favicon.png"
+                src="/logo.png"
                 alt="Nexus Equipment"
                 className="h-10 w-10 rounded-md"
                    />
