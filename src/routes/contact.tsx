@@ -1,26 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Seo } from "@/lib/seo";
 import { Phone, Mail, Send } from "lucide-react";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Nexus Equipment" },
-      { name: "description", content: "Contact Nexus Equipment for industrial sourcing inquiries. Email Sales@Nexusequipment.us or call +1 (917) 735-7990." },
-      { property: "og:title", content: "Contact Nexus Equipment" },
-      { property: "og:description", content: "Get in touch for quotes, sourcing requests or to sell surplus equipment." },
-    ],
-  }),
-  component: ContactPage,
-});
-
-function ContactPage() {
+export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Contact — Nexus Equipment"
+        description="Contact Nexus Equipment for industrial sourcing inquiries. Email Sales@Nexusequipment.us or call +1 (917) 735-7990."
+        ogTitle="Contact Nexus Equipment"
+        ogDescription="Get in touch for quotes, sourcing requests or to sell surplus equipment."
+      />
       <SiteHeader />
 
       <section className="border-b bg-gradient-to-b from-secondary to-background">

@@ -1,19 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Seo } from "@/lib/seo";
 import { Plane, Cog, Zap, FlaskConical, HeartPulse, Cpu, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/industries")({
-  head: () => ({
-    meta: [
-      { title: "Industries We Serve — Nexus Equipment" },
-      { name: "description", content: "Nexus Equipment supplies aviation, industrial automation, electrical, laboratory, medical and smart systems sectors worldwide." },
-      { property: "og:title", content: "Industries We Serve — Nexus Equipment" },
-      { property: "og:description", content: "Sectors supported by Nexus Equipment's worldwide sourcing." },
-    ],
-  }),
-  component: IndustriesPage,
-});
 
 const industries = [
   { icon: Plane, name: "Aviation", text: "Components, ground support equipment and technical supplies for operators, MROs and aviation service providers." },
@@ -24,9 +13,14 @@ const industries = [
   { icon: Cpu, name: "Smart Systems", text: "Embedded controllers, IoT hardware, networking and intelligent building components for connected industrial systems." },
 ];
 
-function IndustriesPage() {
+export default function IndustriesPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Industries We Serve — Nexus Equipment"
+        description="Nexus Equipment supplies aviation, industrial automation, electrical, laboratory, medical and smart systems sectors worldwide."
+        ogDescription="Sectors supported by Nexus Equipment's worldwide sourcing."
+      />
       <SiteHeader />
       <section className="border-b bg-gradient-to-b from-secondary to-background">
         <div className="container mx-auto px-6 py-20">

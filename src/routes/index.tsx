@@ -1,20 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Seo } from "@/lib/seo";
 import { ArrowRight, Globe2, Clock, ShieldCheck, Plane, Cog, Zap, FlaskConical, HeartPulse, Cpu, Mail, Phone } from "lucide-react";
 import heroImg from "@/assets/hero-warehouse.jpg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Nexus Equipment — Industrial Sourcing & Worldwide Supply" },
-      { name: "description", content: "Nexus Equipment is a B2B industrial sourcing and supply company. We supply technical and surplus equipment worldwide with competitive pricing and fast communication." },
-      { property: "og:title", content: "Nexus Equipment — Industrial Sourcing & Worldwide Supply" },
-      { property: "og:description", content: "Worldwide supply of industrial, technical and surplus equipment." },
-    ],
-  }),
-  component: HomePage,
-});
 
 const industries = [
   { icon: Plane, name: "Aviation" },
@@ -25,9 +14,14 @@ const industries = [
   { icon: Cpu, name: "Smart Systems" },
 ];
 
-function HomePage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Nexus Equipment — Industrial Sourcing & Worldwide Supply"
+        description="Nexus Equipment is a B2B industrial sourcing and supply company. We supply technical and surplus equipment worldwide with competitive pricing and fast communication."
+        ogDescription="Worldwide supply of industrial, technical and surplus equipment."
+      />
       <SiteHeader />
 
       {/* Hero */}

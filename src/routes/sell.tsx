@@ -1,21 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Seo } from "@/lib/seo";
 import { Mail, Camera, FileText, DollarSign } from "lucide-react";
 
-export const Route = createFileRoute("/sell")({
-  head: () => ({
-    meta: [
-      { title: "Sell Your Equipment — Nexus Equipment" },
-      { name: "description", content: "Sell surplus or unused industrial equipment to Nexus Equipment. Send photos, condition details and asking price to Sales@Nexusequipment.us." },
-      { property: "og:title", content: "Sell Your Equipment — Nexus Equipment" },
-      { property: "og:description", content: "Turn surplus and unused equipment into value with Nexus Equipment." },
-    ],
-  }),
-  component: SellPage,
-});
-
-function SellPage() {
+export default function SellPage() {
   const items = [
     { icon: Camera, title: "Equipment photos", text: "Clear photos of the unit, the data plate and any visible damage." },
     { icon: FileText, title: "Condition details", text: "Make, model, serial number, year and current operating condition." },
@@ -23,6 +11,11 @@ function SellPage() {
   ];
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Sell Your Equipment — Nexus Equipment"
+        description="Sell surplus or unused industrial equipment to Nexus Equipment. Send photos, condition details and asking price to Sales@Nexusequipment.us."
+        ogDescription="Turn surplus and unused equipment into value with Nexus Equipment."
+      />
       <SiteHeader />
       <section className="border-b bg-gradient-to-b from-secondary to-background">
         <div className="container mx-auto px-6 py-20">
