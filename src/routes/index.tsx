@@ -125,8 +125,8 @@ export default function HomePage() {
           </div>
           <div className="rounded-xl border bg-secondary/60 p-8">
             <div className="text-sm font-semibold text-primary-deep">Send your offer to</div>
-            <a href="mailto:Sales@Nexusequipment.us" className="mt-2 flex items-center gap-2 text-lg font-bold text-primary-deep hover:text-primary">
-              <Mail className="h-5 w-5" /> Sales@Nexusequipment.us
+            <a href="mailto:Sales@Nexusequipment.co.uk" className="mt-2 flex items-center gap-2 text-lg font-bold text-primary-deep hover:text-primary">
+              <Mail className="h-5 w-5" /> Sales@Nexusequipment.co.uk
             </a>
             <Link to="/sell" className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-deep px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary">
               Learn more <ArrowRight className="h-4 w-4" />
@@ -141,8 +141,8 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold md:text-4xl">Let's discuss your sourcing requirement.</h2>
           <p className="mx-auto mt-4 max-w-xl text-[oklch(0.92_0.02_250)]">Reach out with part numbers, specifications or a description of what you need — our team will get back to you with a quote.</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm font-medium">
-            <a href="mailto:Sales@Nexusequipment.us" className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 font-semibold text-primary-deep transition hover:bg-[oklch(0.95_0.02_250)]">
-              <Mail className="h-4 w-4" /> Sales@Nexusequipment.us
+            <a href="mailto:Sales@Nexusequipment.co.uk" className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 font-semibold text-primary-deep transition hover:bg-[oklch(0.95_0.02_250)]">
+              <Mail className="h-4 w-4" /> Sales@Nexusequipment.co.uk
             </a>
             <a href="tel:+19177357990" className="inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-5 py-2.5 font-semibold text-white transition hover:bg-white/20">
               <Phone className="h-4 w-4" /> +1 (917) 735-7990
