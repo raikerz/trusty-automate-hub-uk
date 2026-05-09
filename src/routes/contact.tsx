@@ -193,7 +193,6 @@ export default function ContactPage() {
                     By submitting, you agree to be contacted by Nexus Equipment regarding your inquiry.
                   </p>
                 </form>
-            </div>
         </div>
       </section>
 
