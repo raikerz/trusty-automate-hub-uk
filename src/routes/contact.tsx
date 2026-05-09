@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <Seo
         title="Contact — Nexus Equipment"
-        description="Contact Nexus Equipment for industrial sourcing inquiries. Email Sales@Nexusequipment.us or call +1 (917) 735-7990."
+        description="Contact Nexus Equipment for industrial sourcing inquiries. Email Sales@Nexusequipment.co.uk or call +1 (917) 735-7990."
         ogTitle="Contact Nexus Equipment"
         ogDescription="Get in touch for quotes, sourcing requests or to sell surplus equipment."
       />
@@ -51,10 +51,10 @@ export default function ContactPage() {
             </div>
 
             <a
-              href="mailto:Sales@Nexusequipment.us"
+              href="mailto:Sales@Nexusequipment.co.uk"
               className="mt-4 block text-sm font-medium text-foreground hover:text-primary-deep"
             >
-              Sales@Nexusequipment.us
+              Sales@Nexusequipment.co.uk
             </a>
           </div>
 
