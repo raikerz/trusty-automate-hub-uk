@@ -27,9 +27,9 @@ function ContactPage() {
         <div className="container mx-auto px-6 py-20">
           <div className="max-w-3xl">
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contact</div>
-            <h1 className="mt-3 text-4xl font-bold text-primary-deep md:text-5xl">Talk to our engineering team.</h1>
+            <h1 className="mt-3 text-4xl font-bold text-primary-deep md:text-5xl">Buying, selling or sourcing — let's talk.</h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              Send us your specification or RFQ. An application engineer will respond within one business day.
+              Send us an RFQ for parts you need, or a list of equipment you'd like to sell. Our trading desk responds within one business day.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ function ContactPage() {
             onSubmit={(e) => { e.preventDefault(); setSent(true); }}
             className="rounded-xl border bg-card p-8 shadow-elegant"
           >
-            <h2 className="text-2xl font-bold text-primary-deep">Request a quotation</h2>
+            <h2 className="text-2xl font-bold text-primary-deep">RFQ / Sell offer</h2>
             <p className="mt-1 text-sm text-muted-foreground">Fields marked * are required.</p>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -73,15 +73,15 @@ function ContactPage() {
               <Field label="Business email *" name="email" type="email" required />
               <Field label="Phone" name="phone" />
               <Field label="Country" name="country" />
-              <Field label="Industry" name="industry" placeholder="Automotive, F&B…" />
+              <Field label="Inquiry type" name="type" placeholder="Buying / Selling / Sourcing" />
             </div>
 
             <div className="mt-5">
-              <label className="text-sm font-medium text-foreground">Project details *</label>
+              <label className="text-sm font-medium text-foreground">Part numbers & details *</label>
               <textarea
                 required
                 rows={5}
-                placeholder="Equipment needed, quantities, target delivery date…"
+                placeholder="Part numbers, condition, quantity, target price or delivery date…"
                 className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
               />
             </div>

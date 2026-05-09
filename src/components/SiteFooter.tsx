@@ -11,10 +11,10 @@ export function SiteFooter() {
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary-glow text-primary-deep">
                 <Factory className="h-5 w-5" />
               </div>
-              <span className="font-display text-lg font-bold text-white">AXION Industrial</span>
+              <span className="font-display text-lg font-bold text-white">AXION Trading</span>
             </div>
             <p className="mt-4 max-w-md text-sm text-[oklch(0.78_0.03_250)]">
-              Engineering reliable B2B automation systems for manufacturers worldwide. ISO 9001 certified. Trusted by 400+ industrial partners.
+              B2B trader of aircraft parts, industrial equipment and automation systems. AS9120 / ISO 9001 aligned. Trusted by 400+ partners worldwide.
             </p>
           </div>
           <div>
