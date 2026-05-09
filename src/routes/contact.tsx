@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Seo } from "@/lib/seo";
 import { Phone, Mail, Send } from "lucide-react";
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -60,40 +59,141 @@ export default function ContactPage() {
 
         <div className="lg:col-span-3">
           <form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-            className="rounded-xl border bg-card p-8 shadow-elegant"
-          >
-            <h2 className="text-2xl font-bold text-primary-deep">Send an inquiry</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Fields marked * are required.</p>
+                action="https://formsubmit.co/Sales@Nexusequipment.us"
+                  method="POST"
+                  encType="multipart/form-data"
+                  className="rounded-xl border bg-card p-8 shadow-elegant"
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_subject" value="New Nexus Equipment Inquiry" />
 
-            <div className="mt-8 grid gap-5 md:grid-cols-2">
-              <Field label="Full name *" name="name" required />
-              <Field label="Company *" name="company" required />
-              <Field label="Business email *" name="email" type="email" required />
-              <Field label="Phone" name="phone" />
-              <Field label="Country" name="country" />
-              <Field label="Industry" name="industry" />
+                  <h2 className="text-2xl font-bold text-primary-deep">
+                    Send an inquiry
+                  </h2>
+
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Fields marked * are required.
+                  </p>
+
+                  <div className="mt-8 grid gap-5 md:grid-cols-2">
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Full name *
+                      </label>
+
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Company *
+                      </label>
+
+                      <input
+                        type="text"
+                        name="company"
+                        required
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Business email *
+                      </label>
+
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Phone
+                      </label>
+                
+                      <input
+                        type="text"
+                        name="phone"
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Country
+                      </label>
+
+                      <input
+                        type="text"
+                        name="country"
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground">
+                        Industry
+                      </label>
+
+                      <input
+                        type="text"
+                        name="industry"
+                        className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                      />
+                    </div>
+                
+                  </div>
+
+                  <div className="mt-5">
+                    <label className="text-sm font-medium text-foreground">
+                      Equipment details *
+                    </label>
+
+                    <textarea
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder="Part numbers, specifications, quantities, target delivery date..."
+                      className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
+                    />
+                  </div>
+
+                  <div className="mt-5">
+                    <label className="text-sm font-medium text-foreground">
+                      Upload files / photos
+                    </label>
+
+                    <input
+                      type="file"
+                      name="attachment"
+                      multiple
+                      className="mt-2 block w-full rounded-md border border-input bg-background px-4 py-3 text-sm"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-deep px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary md:w-auto"
+                  >
+                    Send Inquiry
+                  </button>
+
+                  <p className="mt-4 text-xs text-muted-foreground">
+                    By submitting, you agree to be contacted by Nexus Equipment regarding your inquiry.
+                  </p>
+                </form>
             </div>
-
-            <div className="mt-5">
-              <label className="text-sm font-medium text-foreground">Equipment details *</label>
-              <textarea
-                required
-                rows={5}
-                placeholder="Part numbers, specifications, quantities, target delivery date…"
-                className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-primary-deep focus:ring-2 focus:ring-primary-deep/20"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={sent}
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-deep px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary md:w-auto"
-            >
-              {sent ? "Inquiry received — we'll be in touch" : <>Send Inquiry <Send className="h-4 w-4" /></>}
-            </button>
-            <p className="mt-4 text-xs text-muted-foreground">By submitting, you agree to be contacted by Nexus Equipment regarding your inquiry.</p>
-          </form>
         </div>
       </section>
 
