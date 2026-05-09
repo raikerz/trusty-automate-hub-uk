@@ -33,7 +33,7 @@ export function SiteFooter() {
             <h4 className="text-sm font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +1 (917) 735-7990</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> Sales@Nexusequipment.us</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> Sales@Nexusequipment.co.uk</li>
             </ul>
           </div>
         </div>
