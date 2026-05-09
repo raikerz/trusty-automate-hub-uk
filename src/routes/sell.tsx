@@ -13,7 +13,7 @@ export default function SellPage() {
     <div className="min-h-screen bg-background">
       <Seo
         title="Sell Your Equipment — Nexus Equipment"
-        description="Sell surplus or unused industrial equipment to Nexus Equipment. Send photos, condition details and asking price to Sales@Nexusequipment.us."
+        description="Sell surplus or unused industrial equipment to Nexus Equipment. Send photos, condition details and asking price to Sales@Nexusequipment.co.uk."
         ogDescription="Turn surplus and unused equipment into value with Nexus Equipment."
       />
       <SiteHeader />
@@ -24,7 +24,7 @@ export default function SellPage() {
             <h1 className="mt-3 text-4xl font-bold text-primary-deep md:text-5xl">Turn surplus equipment into value.</h1>
             <p className="mt-5 text-lg text-muted-foreground">
               Looking to sell surplus or unused equipment? Send equipment photos, condition details and your asking price to{" "}
-              <a href="mailto:Sales@Nexusequipment.us" className="font-semibold text-primary-deep hover:text-primary">Sales@Nexusequipment.us</a>{" "}
+              <a href="mailto:Sales@Nexusequipment.co.uk" className="font-semibold text-primary-deep hover:text-primary">Sales@Nexusequipment.co.uk</a>{" "}
               — our team reviews every offer and responds promptly.
             </p>
           </div>
@@ -47,8 +47,8 @@ export default function SellPage() {
         <div className="mt-14 rounded-2xl border bg-card p-10 text-center shadow-card">
           <h2 className="text-2xl font-bold text-primary-deep">Send your offer</h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Email your equipment list with the details above and we'll respond with our interest and indicative pricing.</p>
-          <a href="mailto:Sales@Nexusequipment.us" className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-deep px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary">
-            <Mail className="h-4 w-4" /> Sales@Nexusequipment.us
+          <a href="mailto:Sales@Nexusequipment.co.uk" className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-deep px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary">
+            <Mail className="h-4 w-4" /> Sales@Nexusequipment.co.uk
           </a>
         </div>
       </section>
