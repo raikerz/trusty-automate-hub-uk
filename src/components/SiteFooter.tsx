@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Hexagon, Mail, Phone } from "lucide-react";
 
 export function SiteFooter() {
   return (
