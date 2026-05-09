@@ -59,7 +59,7 @@ export default function ContactPage() {
 
         <div className="lg:col-span-3">
           <form
-                action="https://formsubmit.co/Sales@Nexusequipment.us"
+                action="https://formspree.io/f/mwvywvlz"
                   method="POST"
                   encType="multipart/form-data"
                   className="rounded-xl border bg-card p-8 shadow-elegant"
