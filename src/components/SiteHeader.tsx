@@ -12,7 +12,7 @@ export function SiteHeader() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-base font-bold text-primary-deep">AXION</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Industrial Automation</div>
+            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Aircraft · Industrial · Automation</div>
           </div>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
